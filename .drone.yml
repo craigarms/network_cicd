@@ -1,11 +1,11 @@
 kind: pipeline
-name: Network_CI_DC
+name: Network_CI_DC_With_Ansible
 type: docker
 
 steps:
-  - name: Render Configuration
-    image: python:alpine3.17
-    commands:
-      - pip install -r requirements.txt
-      - python ./send_config.py Templates/router_interfaces.j2 Configs/r1.yml
-      - python ./test_config.py
+  - name: Deploy with Ansible
+    image: plugins/ansible:3
+    settings:
+      playbook: playbook
+      inventory: inventory.ini
+      syntax_check: true
