@@ -7,6 +7,4 @@ steps:
     image: python:alpine3.17
     commands:
       - pip install -r requirements.txt
-      - python ./jinja_renderer.py Templates/router_interfaces.j2 Configs/r1.yml
-      - ip addr
-      - ping -c 5 192.168.122.100
+      - python ./send_config.py Templates/router_interfaces.j2 Configs/r1.yml
