@@ -1,1 +1,3 @@
-- src: cisco.ios
+collections:
+  - name: cisco.ios
+    version: ">=4.3.0"
