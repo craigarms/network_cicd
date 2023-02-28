@@ -1,0 +1,19 @@
+interfaces:
+  r1:
+    - name: Ethernet0/0
+      ip: 10.0.12.1/30
+      description: "To R2"
+      activate: True
+    - name: Ethernet0/1
+      ip: 10.0.13.1/30
+      description: "To D3"
+      activate: True
+  r2:
+    - name: Ethernet0/0
+      ip: 10.0.12.2/30
+      description: "To R1"
+      activate: True
+    - name: Ethernet0/1
+      ip: 10.0.23.2/30
+      description: "To D3"
+      activate: True
