@@ -4,7 +4,7 @@
   name: Configure Routers
   
   tasks:
-    - include_vars: Configs/r1.yml
+    - include_vars: Configs/all_routers.yml
     
     - ansible.builtin.debug: 
         var: vars
