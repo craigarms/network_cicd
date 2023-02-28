@@ -20,8 +20,7 @@ if __name__ == "__main__":
 
 def main(tpl, config):
     jinja = Environment(loader = FileSystemLoader('.'), trim_blocks=True, lstrip_blocks=True)
-    
-    
+
     if os.path.exists(tpl) and os.path.exists(config):
         template = jinja.get_template(tpl)
     
