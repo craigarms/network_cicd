@@ -2,9 +2,6 @@
 - hosts: r1
   gather_facts: false
   name: Configure R1
-  ansible_connection: ansible.netcommon.network_cli
-  ansible_username: craig
-  ansible_password: cisco
   
   tasks:
     - include_vars: Configs/r1.yml
