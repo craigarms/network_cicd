@@ -1,9 +1,9 @@
 interfaces:
-  - name: Ethernet0/0
+  - name: Ethernet0/2
     ip: 10.0.12.1/30
     description: "To R2"
-    activate: True
-  - name: Ethernet0/1
+    activate: False
+  - name: Ethernet0/3
     ip: 10.0.13.1/30
     description: "To D3"
     activate: True
