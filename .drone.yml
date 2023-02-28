@@ -7,5 +7,5 @@ steps:
     image: plugins/ansible:3
     settings:
       playbook: playbook
+      galaxy: galaxy_requirements.yml
       inventory: inventory.ini
-      syntax_check: true
