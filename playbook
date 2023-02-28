@@ -14,7 +14,7 @@ tasks:
   - name: Configure description and status
     cisco.ios.ios_interfaces:
       config:
-        - name: {{ item.name }}
-          description: {{ item.description }}
-          enabled: {{ item.activate }}
-    loop: {{ interfaces }}
+        - name: "{{ item.name }}"
+          description: "{{ item.description }}"
+          enabled: "{{ item.activate }}"
+    loop: "{{ interfaces }}"
