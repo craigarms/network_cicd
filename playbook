@@ -1,7 +1,7 @@
 ---
-- hosts: r1
+- hosts: routers
   gather_facts: false
-  name: Configure R1
+  name: Configure Routers
   
   tasks:
     - include_vars: Configs/r1.yml
@@ -15,4 +15,4 @@
           - name: "{{ item.name }}"
             description: "{{ item.description }}"
             enabled: "{{ item.activate }}"
-      loop: "{{ interfaces }}"
+      loop: "{{ interfaces[inventory_hostname] }}"
