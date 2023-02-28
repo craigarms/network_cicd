@@ -6,8 +6,8 @@
   tasks:
     - include_vars: Configs/r1.yml
     
-    - debug: 
-      var: vars
+    - ansible.builtin.debug: 
+        var: vars
     
     - name: Configure description and status
       cisco.ios.ios_interfaces:
