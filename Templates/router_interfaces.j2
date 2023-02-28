@@ -2,7 +2,7 @@
 !
 interface {{ interface.name }}
  description {{ interface.description }}
- ip address {{ interface.ip }}
+ ip address {{ interface.ip | replace("/30", " 255.255.255.252") }}
  {% if interface.activate %}
  no shutdown
  {% else %}
