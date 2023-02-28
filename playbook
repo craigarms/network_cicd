@@ -6,7 +6,8 @@
   tasks:
     - include_vars: Configs/r1.yml
     
-    - debug: vars
+    - debug: 
+      var: vars
     
     - name: Configure description and status
       cisco.ios.ios_interfaces:
